@@ -59,41 +59,58 @@ jobs:
 
     - name: Export IPA (No Code Signing)
       run: |
-        # 创建 exportOptions.plist
+        # 创建 exportOptions.plist 用于未签名应用
         cat > exportOptions.plist <<EOF
         <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
         <plist version="1.0">
         <dict>
             <key>method</key>
-            <string>enterprise</string>
+            <string>development</string>
             <key>teamID</key>
-            <string>XXXXXXXXXX</string>
+            <string>NOT_SET</string>
             <key>compileBitcode</key>
             <false/>
             <key>uploadSymbols</key>
             <false/>
             <key>signingStyle</key>
             <string>manual</string>
-            <key>signingCertificate</key>
-            <string>Apple Development</string>
             <key>provisioningProfiles</key>
-            <dict/>
-            <key>stripSwiftSymbols</key>
-            <true/>
-            <key>uploadBitcode</key>
-            <false/>
+            <dict>
+                <key>com.autumnokra.gameassistant</key>
+                <string>NOT_SET</string>
+            </dict>
         </dict>
         </plist>
         EOF
 
+        # 尝试导出
         xcodebuild -exportArchive \
           -archivePath build/AutumnOkraGameAssistant.xcarchive \
           -exportPath build/export \
           -exportOptionsPlist exportOptions.plist \
-          CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
-          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_ALLOWED=NO \
+          || {
+            echo "=== Export failed, trying alternative method ==="
+            # 备用方法：直接从 xcarchive 中提取 .app 并打包成 .ipa
+            mkdir -p build/export
+            APP_PATH=$(find build/AutumnOkraGameAssistant.xcarchive -name "AutumnOkraGameAssistant.app" -type d | head -1)
+            if [ -z "$APP_PATH" ]; then
+              echo "Error: Could not find .app in archive"
+              exit 1
+            fi
+            echo "Found app at: $APP_PATH"
+            # 创建 Payload 目录
+            mkdir -p build/export/Payload
+            # 复制 .app 到 Payload
+            cp -R "$APP_PATH" build/export/Payload/
+            # 创建 IPA
+            cd build/export
+            zip -r ../AutumnOkraGameAssistant.ipa Payload/
+            cd ../..
+            echo "IPA created manually"
+          }
 
     - name: Verify IPA
       run: |
