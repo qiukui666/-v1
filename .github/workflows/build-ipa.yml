@@ -66,9 +66,9 @@ jobs:
         <plist version="1.0">
         <dict>
             <key>method</key>
-            <string>development</string>
+            <string>enterprise</string>
             <key>teamID</key>
-            <string></string>
+            <string>XXXXXXXXXX</string>
             <key>compileBitcode</key>
             <false/>
             <key>uploadSymbols</key>
@@ -76,9 +76,13 @@ jobs:
             <key>signingStyle</key>
             <string>manual</string>
             <key>signingCertificate</key>
-            <string></string>
+            <string>Apple Development</string>
             <key>provisioningProfiles</key>
             <dict/>
+            <key>stripSwiftSymbols</key>
+            <true/>
+            <key>uploadBitcode</key>
+            <false/>
         </dict>
         </plist>
         EOF
