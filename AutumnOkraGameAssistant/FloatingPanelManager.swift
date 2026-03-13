@@ -135,7 +135,7 @@ class FloatingPanelView: UIView {
         menu.layer.cornerRadius = 15
         menu.layer.shadowColor = UIColor.black.cgColor
         menu.layer.shadowOpacity = 0.3
-        menu.layer.shadowOffset = CGSize(width: 0, y: 2)
+        menu.layer.shadowOffset = CGSize(width: 0, height: 2)
         menu.layer.shadowRadius = 10
         
         let stackView = UIStackView()
@@ -263,9 +263,9 @@ class FloatingPanelView: UIView {
     private func checkNetwork() {
         // 检查网络状态
         let reachability = Reachability()
-        let isOnline = reachability?.connection != .none
-        
-        showAlert(title: "网络状态", message: isOnline ?? false ? "网络连接正常" : "网络未连接")
+        let isOnline = reachability.connection != .none
+
+        showAlert(title: "网络状态", message: isOnline ? "网络连接正常" : "网络未连接")
     }
     
     private func startScreenRecording() {
