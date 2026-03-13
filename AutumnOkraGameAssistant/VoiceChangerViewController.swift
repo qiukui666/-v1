@@ -154,9 +154,11 @@ class VoiceChangerViewController: UIViewController {
     }
     
     @objc private func voiceButtonTapped(_ sender: UIButton) {
+        print("Voice button tapped")
         // 重置所有按钮样式
         voiceButtons.values.forEach { button in
             button.backgroundColor = .systemGray5
+            button.setTitleColor(.label, for: .normal)
         }
         
         // 设置选中样式
@@ -169,9 +171,14 @@ class VoiceChangerViewController: UIViewController {
         }
         
         statusLabel.text = "已选择：\(selectedVoiceType.rawValue)"
+        
+        // 触感反馈
+        let feedback = UIImpactFeedbackGenerator(style: .medium)
+        feedback.impactOccurred()
     }
     
     @objc private func recordButtonTouchDown() {
+        print("Record button touch down")
         recordButton.backgroundColor = .systemBlue
         recordButton.setTitle("正在录音...", for: .normal)
         statusLabel.text = "正在录制并应用变声效果..."
@@ -180,6 +187,7 @@ class VoiceChangerViewController: UIViewController {
     }
     
     @objc private func recordButtonTouchUp() {
+        print("Record button touch up")
         recordButton.backgroundColor = .systemRed
         recordButton.setTitle("按住说话", for: .normal)
         

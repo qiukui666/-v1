@@ -107,18 +107,25 @@ class MainViewController: UIViewController {
     }
     
     @objc private func voiceChangerTapped() {
+        print("Voice changer button tapped")
         let voiceVC = VoiceChangerViewController()
+        voiceVC.title = "实时变声"
+        navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.pushViewController(voiceVC, animated: true)
     }
-    
+
     @objc private func soundEffectTapped() {
+        print("Sound effect button tapped")
         let soundVC = SoundEffectViewController()
+        soundVC.title = "音效板"
+        navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.pushViewController(soundVC, animated: true)
     }
-    
+
     @objc private func floatingPanelTapped() {
+        print("Floating panel button tapped")
         FloatingPanelManager.shared.showFloatingPanel()
-        
+
         let alert = UIAlertController(title: "悬浮工具箱", message: "悬浮面板已开启！\n\n功能包括：\n• 一键调整亮度\n• 触感反馈开关\n• 勿扰模式\n• 网络状态检测\n• 录屏/截图快捷键", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "知道了", style: .default))
         present(alert, animated: true)

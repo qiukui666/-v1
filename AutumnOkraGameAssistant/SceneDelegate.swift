@@ -10,10 +10,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // 创建主视图控制器
         let mainViewController = MainViewController()
+        mainViewController.title = "秋葵游戏助手"
 
         // 使用导航控制器
         let navigationController = UINavigationController(rootViewController: mainViewController)
-        navigationController.navigationBar.isHidden = true
+        
+        // 设置导航栏外观
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
+        navigationController.navigationBar.prefersLargeTitles = false
 
         // 设置窗口
         window = UIWindow(windowScene: windowScene)
@@ -22,6 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // 请求权限
         requestPermissions()
+        
+        print("Scene loaded successfully")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
