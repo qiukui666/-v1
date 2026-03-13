@@ -34,6 +34,13 @@ jobs:
         echo "=== Check Xcode project ==="
         ls -la AutumnOkraGameAssistant.xcodeproj/
 
+    - name: Clean build
+      run: |
+        xcodebuild clean \
+          -project AutumnOkraGameAssistant.xcodeproj \
+          -scheme AutumnOkraGameAssistant \
+          -configuration Release
+
     - name: Build and Archive (No Code Signing)
       run: |
         xcodebuild archive \
@@ -45,11 +52,8 @@ jobs:
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
           -destination generic/platform=iOS \
-          VERBOSE=1 || {
-            echo "=== Build failed, checking archive directory ==="
-            ls -la build/ 2>/dev/null || true
-            echo "=== Checking DerivedData logs ==="
-            find ~/Library/Developer/Xcode/DerivedData -name "*.log" -mtime -1 -exec echo "=== {} ===" \; -exec tail -50 {} \;
+          -allowProvisioningUpdates || {
+            echo "=== BUILD FAILED ==="
             exit 1
           }
 
