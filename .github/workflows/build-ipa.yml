@@ -107,10 +107,17 @@ jobs:
             cp -R "$APP_PATH" build/export/Payload/
             # 创建 IPA
             cd build/export
-            zip -r ../AutumnOkraGameAssistant.ipa Payload/
+            zip -r AutumnOkraGameAssistant.ipa Payload/
             cd ../..
-            echo "IPA created manually"
+            echo "IPA created manually at build/export/AutumnOkraGameAssistant.ipa"
           }
+
+    - name: Verify IPA
+      run: |
+        echo "=== Checking for IPA file ==="
+        find build -name "*.ipa"
+        ls -la build/ 2>/dev/null || true
+        ls -la build/export/ 2>/dev/null || true
 
     - name: Verify IPA
       run: |
