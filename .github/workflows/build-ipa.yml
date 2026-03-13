@@ -28,7 +28,6 @@ jobs:
 
     - name: Build and Archive (No Code Signing)
       run: |
-        cd AutumnOkraGameAssistant.xcodeproj
         xcodebuild archive \
           -project AutumnOkraGameAssistant.xcodeproj \
           -scheme AutumnOkraGameAssistant \
