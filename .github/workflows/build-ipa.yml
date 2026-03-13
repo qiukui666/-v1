@@ -44,7 +44,14 @@ jobs:
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
-          -destination generic/platform=iOS
+          -destination generic/platform=iOS \
+          VERBOSE=1 || {
+            echo "=== Build failed, checking archive directory ==="
+            ls -la build/ 2>/dev/null || true
+            echo "=== Checking DerivedData logs ==="
+            find ~/Library/Developer/Xcode/DerivedData -name "*.log" -mtime -1 -exec echo "=== {} ===" \; -exec tail -50 {} \;
+            exit 1
+          }
 
     - name: Export IPA (No Code Signing)
       run: |
