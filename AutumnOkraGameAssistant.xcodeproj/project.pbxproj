@@ -5,86 +5,98 @@
 	};
 	objectVersion = 56;
 	objects = {
-		/* Begin PBXBuildFile section */
-		AABCD123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABCD124 /* AppDelegate.swift */; };
-		AABCD125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABCD126 /* SceneDelegate.swift */; };
-		AABCD127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABCD128 /* ViewController.swift */; };
-		AABCD129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AABCD130 /* Main.storyboard */; };
-		AABCD131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABCD132 /* Assets.xcassets */; };
-		AABCD133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AABCD134 /* LaunchScreen.storyboard */; };
-		/* End PBXBuildFile section */
 
-		/* Begin PBXFileReference section */
-		AABCD100 /* AutumnOkraGameAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutumnOkraGameAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AABCD124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AABCD126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AABCD128 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AABCD130 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		AABCD132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AABCD134 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AABCD136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		/* End PBXFileReference section */
+/* Begin PBXBuildFile section */
+		A1001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1002 /* AppDelegate.swift */; };
+		A1003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1004 /* SceneDelegate.swift */; };
+		A1005 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1006 /* ViewController.swift */; };
+		A1007 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008 /* MainViewController.swift */; };
+		A1009 /* VoiceChangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1010 /* VoiceChangerViewController.swift */; };
+		A1011 /* SoundEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1012 /* SoundEffectViewController.swift */; };
+		A1013 /* FloatingPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1014 /* FloatingPanelManager.swift */; };
+		A1015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1016 /* Main.storyboard */; };
+		A1017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1018 /* LaunchScreen.storyboard */; };
+		A1019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1020 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
 
-		/* Begin PBXFrameworksBuildPhase section */
-		AABCD097 /* Frameworks */ = {
+/* Begin PBXFileReference section */
+		A2001 /* AutumnOkraGameAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutumnOkraGameAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1004 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A1006 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1008 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A1010 /* VoiceChangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChangerViewController.swift; sourceTree = "<group>"; };
+		A1012 /* SoundEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectViewController.swift; sourceTree = "<group>"; };
+		A1014 /* FloatingPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelManager.swift; sourceTree = "<group>"; };
+		A1016 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A1018 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		/* End PBXFrameworksBuildPhase section */
+/* End PBXFrameworksBuildPhase section */
 
-		/* Begin PBXGroup section */
-		AABCD091 = {
+/* Begin PBXGroup section */
+		A4001 = {
 			isa = PBXGroup;
 			children = (
-				AABCD09C,
-				AABCD09B,
-				AABCD09A,
-				AABCD100,
+				A4002,
+				A4003,
+				A4004,
 			);
 			sourceTree = "<group>";
 		};
-		AABCD09A /* Products */ = {
+		A4002 /* AutumnOkraGameAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				AABCD100 /* AutumnOkraGameAssistant.app */,
+				A1002 /* AppDelegate.swift */,
+				A1004 /* SceneDelegate.swift */,
+				A1006 /* ViewController.swift */,
+				A1008 /* MainViewController.swift */,
+				A1010 /* VoiceChangerViewController.swift */,
+				A1012 /* SoundEffectViewController.swift */,
+				A1014 /* FloatingPanelManager.swift */,
+				A1016 /* Main.storyboard */,
+				A1018 /* LaunchScreen.storyboard */,
+				A1020 /* Assets.xcassets */,
+				A1021 /* Info.plist */,
+			);
+			path = AutumnOkraGameAssistant;
+			sourceTree = "<group>";
+		};
+		A4003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2001 /* AutumnOkraGameAssistant.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AABCD09B /* Frameworks */ = {
+		A4004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AABCD09C = {
-			isa = PBXGroup;
-			children = (
-				AABCD124 /* AppDelegate.swift */,
-				AABCD126 /* SceneDelegate.swift */,
-				AABCD128 /* ViewController.swift */,
-				AABCD130 /* Main.storyboard */,
-				AABCD132 /* Assets.xcassets */,
-				AABCD134 /* LaunchScreen.storyboard */,
-				AABCD136 /* Info.plist */,
-			);
-			path = AutumnOkraGameAssistant;
-			sourceTree = "<group>";
-		};
-		/* End PBXGroup section */
+/* End PBXGroup section */
 
-		/* Begin PBXNativeTarget section */
-		AABCD09F /* AutumnOkraGameAssistant */ = {
+/* Begin PBXNativeTarget section */
+		A5001 /* AutumnOkraGameAssistant */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AABCD149 /* Build configuration list for PBXNativeTarget "AutumnOkraGameAssistant" */;
+			buildConfigurationList = A6001 /* Build configuration list for PBXNativeTarget "AutumnOkraGameAssistant" */;
 			buildPhases = (
-				AABCD09C /* Sources */,
-				AABCD097 /* Frameworks */,
-				AABCD098 /* Resources */,
+				A5002 /* Sources */,
+				A3001 /* Frameworks */,
+				A5003 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,24 +104,24 @@
 			);
 			name = AutumnOkraGameAssistant;
 			productName = AutumnOkraGameAssistant;
-			productReference = AABCD100 /* AutumnOkraGameAssistant.app */;
+			productReference = A2001 /* AutumnOkraGameAssistant.app */;
 			productType = "com.apple.product-type.application";
 		};
-		/* End PBXNativeTarget section */
+/* End PBXNativeTarget section */
 
-		/* Begin PBXProject section */
-		AABCD092 /* Project object */ = {
+/* Begin PBXProject section */
+		A7001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					AABCD09F = {
+					A5001 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = AABCD095 /* Build configuration list for PBXProject "" */;
+			buildConfigurationList = A7002 /* Build configuration list for PBXProject "" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,44 +129,48 @@
 				en,
 				Base,
 			);
-			mainGroup = AABCD091;
-			productRefGroup = AABCD09A /* Products */;
+			mainGroup = A4001;
+			productRefGroup = A4003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AABCD09F /* AutumnOkraGameAssistant */,
+				A5001 /* AutumnOkraGameAssistant */,
 			);
 		};
-		/* End PBXProject section */
+/* End PBXProject section */
 
-		/* Begin PBXResourcesBuildPhase section */
-		AABCD098 /* Resources */ = {
+/* Begin PBXResourcesBuildPhase section */
+		A5003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AABCD129 /* Main.storyboard in Resources */,
-				AABCD131 /* Assets.xcassets in Resources */,
-				AABCD133 /* LaunchScreen.storyboard in Resources */,
+				A1015 /* Main.storyboard in Resources */,
+				A1017 /* LaunchScreen.storyboard in Resources */,
+				A1019 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		/* End PBXResourcesBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
-		/* Begin PBXSourcesBuildPhase section */
-		AABCD09C /* Sources */ = {
+/* Begin PBXSourcesBuildPhase section */
+		A5002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AABCD127 /* ViewController.swift in Sources */,
-				AABCD125 /* SceneDelegate.swift in Sources */,
-				AABCD123 /* AppDelegate.swift in Sources */,
+				A1005 /* ViewController.swift in Sources */,
+				A1007 /* MainViewController.swift in Sources */,
+				A1009 /* VoiceChangerViewController.swift in Sources */,
+				A1011 /* SoundEffectViewController.swift in Sources */,
+				A1013 /* FloatingPanelManager.swift in Sources */,
+				A1003 /* SceneDelegate.swift in Sources */,
+				A1001 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		/* End PBXSourcesBuildPhase section */
+/* End PBXSourcesBuildPhase section */
 
-		/* Begin XCBuildConfiguration section */
-		AABCD147 /* Debug */ = {
+/* Begin XCBuildConfiguration section */
+		A6002 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		AABCD148 /* Release */ = {
+		A6003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,10 +289,11 @@
 			};
 			name = Release;
 		};
-		AABCD14A /* Debug */ = {
+		A6004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AutumnOkraGameAssistant/AutumnOkraGameAssistant.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -302,10 +319,11 @@
 			};
 			name = Debug;
 		};
-		AABCD14B /* Release */ = {
+		A6005 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AutumnOkraGameAssistant/AutumnOkraGameAssistant.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -331,28 +349,28 @@
 			};
 			name = Release;
 		};
-		/* End XCBuildConfiguration section */
+/* End XCBuildConfiguration section */
 
-		/* Begin XCConfigurationList section */
-		AABCD095 /* Build configuration list for PBXProject "" */ = {
+/* Begin XCConfigurationList section */
+		A7002 /* Build configuration list for PBXProject "" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AABCD147 /* Debug */,
-				AABCD148 /* Release */,
+				A6002 /* Debug */,
+				A6003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AABCD149 /* Build configuration list for PBXNativeTarget "AutumnOkraGameAssistant" */ = {
+		A6001 /* Build configuration list for PBXNativeTarget "AutumnOkraGameAssistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AABCD14A /* Debug */,
-				AABCD14B /* Release */,
+				A6004 /* Debug */,
+				A6005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		/* End XCConfigurationList section */
+/* End XCConfigurationList section */
 	};
-	rootObject = AABCD092 /* Project object */;
+	rootObject = A7001 /* Project object */;
 }
